@@ -5,6 +5,7 @@
 }
 body{
 	background: url("images/BG1.jpg") no-repeat fixed top right;
+	
 }
 #container{
 	width: 800px;
@@ -30,7 +31,7 @@ body{
 	margin: 0px 0px 10px 0px;
 	padding: 30px 30px 30px 30px;
 	border: dashed 3px rgba(240,240,240,1.00);
-	display: none
+	
 }
 footer{
 	background-color: rgba(219,169,235,1.00);
@@ -39,5 +40,24 @@ footer{
 header > h1{
 	text-align: center;
 	color:ghostwhite
+}		
+nav{
+}
 	
+article a:link{
+		color:hotpink;
+}
+article a:hover{
+	font-size:30px;
+}
+article a:visited{
+	color:aqua;
+}
+article a:active{
+	color:greenyellow;
+}
+.lugrasimo-regular {
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
