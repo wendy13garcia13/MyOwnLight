@@ -82,7 +82,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:rgba(0,0,0,0.00);
+  background-color:rgba(199,25,171,0.40);
 }
 
 nav li {
@@ -102,7 +102,7 @@ nav li a:hover:not(.active) {
 }
 
 nav .active {
-  background-color:rgba(0,0,0,0.00);
+  background-color:rgba(199,25,171,0.40);
 }
 
 
