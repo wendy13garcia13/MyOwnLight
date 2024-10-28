@@ -114,4 +114,42 @@ nav .active {
   background-color:rgba(199,25,171,0.40);
 }
 
+button{
+	background-color: rgba(85,2,219,0.68);
+	color:white;
+	font-size: 20px;
+} 
+@media (max-width: 1080px) {
+#container {
+    width: 90%;
+    background-color: bisque;
+}
+.flex-responsive {
+    flex: 100%;
+	}
+}
+
+@media only screen and (min-width: 1039px) {
+	.flex-container{
+		display: flex;
+		flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+	.flex-container{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
+
+@media print {
+	.flex-container{
+		display: flex;
+		flex-direction:column;
+}
+
 

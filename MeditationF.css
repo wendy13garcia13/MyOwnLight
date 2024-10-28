@@ -44,9 +44,6 @@ body{
   font-weight: 400;
   font-style: normal;
 }
-nav{
-}
-	
 article a:link{
 		color:hotpink;
 }
@@ -112,34 +109,40 @@ footer{
 	float:left;
 	color:white;
   	font-size: 15px;
-	
 }
+
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 1080px) {
 #container {
     width: 90%;
-    margin: 0 auto;
     background-color: bisque;
 }
 .flex-responsive {
     flex: 100%;
-}
+	}
 }
 
 @media only screen and (min-width: 1039px) {
-    /* tablets and desktop */
+    .flex-container{
+		display: flex;
+		flex-direction: column;
+	}
 }
 
-@media only screen and (max-width: 1038px) {
-    /* phones */
+@media only screen and (max-width: 768px) {
+	.flex-container{
+		display: flex;
+		flex-direction: column;
+	}
 }
 
-@media only screen and (max-width: 1037px) and (orientation: portrait) {
-    /* portrait phones */
-}
+@media only screen and (max-width: 767px) and (orientation: portrait) 
 
 @media print {
-	/*this is if you want a print version of your page. */
+	.flex-container{
+		display: flex;
+		flex-direction: column;
+	}
 }
 #accordion {
 	margin-top: 50px;
@@ -154,3 +157,9 @@ footer{
 	background-color:rgba(85,2,219,0.68);
 	color:ghostwhite;
 }
+
+button{
+	background-color: rgba(85,2,219,0.68);
+	color:white;
+	font-size: 20px;
+} 

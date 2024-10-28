@@ -6,7 +6,11 @@
 <link rel ="stylesheet" href="MeditationF.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">	
+<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+	
+<button onclick="getLocation()">Geo Location</button>
+	<p id="demo"></p>	
+
 <style media="screen">
 	* {
     box-sizing: border-box;
@@ -47,7 +51,7 @@ nav{
 	
 	.makeMeStack{
 		flex:100%;
-}
+	}
 }
 </head>
 </style>
@@ -69,7 +73,7 @@ nav{
   <div style="flex-grow: 5" > <p>This is where I will go over Meditation information and challenges. </p></div>
  </div>
 
-</head>
+
 <body>
 <link rel="stylesheet" href="jqueryAccordion/jquery-ui.css">
   <link rel="stylesheet" href="jqueryAccordion/jquery-ui.js">
@@ -77,9 +81,7 @@ nav{
   <link rel="stylesheet" href="jqueryAccordion/jquery-ui.theme.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-</head>
-<body>
- 
+
 <div id="accordion">
   <h3>Transmutation</h3>
   <div>
@@ -105,6 +107,22 @@ $( "#accordion" ).accordion();
 			
 <footer>Copyright 2024 Wendy Garcia</footer>
 
-	
 </body>
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+		
 </html>

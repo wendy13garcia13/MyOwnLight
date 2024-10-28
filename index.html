@@ -7,6 +7,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+<button onclick="getLocation()">Geo Location</button>
+	<p id="demo"></p>	
 </head>
 <body>
 	<div id="container">
@@ -31,7 +33,7 @@
 		<p><a href="MeditationF.html">Meditation</a></p>
 	</article>	
 			 
-	<audio controls autoplay loop >
+	<audio controls autoplay >
 		<source src="Audio/meditation_nature.wav" type="audio/mpeg">
 	</audio>
 			 
@@ -52,6 +54,24 @@
 	<footer>Copyright Wendy Garcia 2024<br>
 		</footer>	
 </body>
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+		
+	
 </html>
 
 
